@@ -1,0 +1,12 @@
+[Unit]
+Description=Socket for interacting with {{ friendly_name }}, reference: {{ server_ref }}
+PartOf={{ friendly_name }}-{{ server_ref }}.service
+
+[Socket]
+ListenFIFO=/run/{{ friendly_name }}-{{ server_ref }}.socket
+SocketUser={{ run_user }}
+SocketGroup={{ run_group }}
+RemoveOnStop=yes
+
+[Install]
+WantedBy=sockets.target

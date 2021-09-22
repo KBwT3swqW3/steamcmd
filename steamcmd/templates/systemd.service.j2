@@ -1,0 +1,15 @@
+[Unit]
+Description=Instance of {{ friendly_name }}, reference: {{ server_ref }}
+After={{ friendly_name }}-{{ server_ref }}.socket
+Requires={{ friendly_name }}-{{ server_ref }}.socket
+
+[Service]
+StandardInput=socket
+StandardOutput=journal+console
+User={{ run_user }}
+Group={{ run_group }}
+ExecStart={{ start_cmd }}
+ExecStop={{ stop_cmd }}
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,3 @@
+{% for admin in admins -%}
+"{{ admin.username }}"    "{{ admin.group }}"{% if admin.password %}   "{{ admin.password }}"{% endif %}
+{% endfor %}

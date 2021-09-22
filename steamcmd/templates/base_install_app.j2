@@ -1,0 +1,10 @@
+@ShutdownOnFailedCommand {{ "0" if multi_server else "1" }}
+@NoPromptForPassword {{ "1" if password else "0" }}
+{%- if username %}
+login {{ username }} {{ password | default('') }}
+{% else %}
+login anonymous
+{% endif -%}
+force_install_dir {{ install_path }}
+app_update {{ app_id }} validate
+quit

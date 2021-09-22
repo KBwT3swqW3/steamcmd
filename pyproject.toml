@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "steamcmd"
+version = "0.1.0"
+description = ""
+
+[tool.poetry.dependencies]
+python = "^3.7"
+Jinja2 = "^3.0.1"
+requests = "^2.26.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.9b0"
+flake8 = "^3.9.2"
+Sphinx = "^4.2.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

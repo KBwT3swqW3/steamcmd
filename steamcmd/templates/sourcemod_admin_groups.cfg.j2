@@ -1,0 +1,10 @@
+Groups
+{
+{% for group in groups %}
+    "{{ group['name'] }}"
+    {
+        "flags"     "{{ group['permissions'] }}"
+        "immunity"  "{{ group['immunity'] }}"
+    }
+{% endfor %}
+}
