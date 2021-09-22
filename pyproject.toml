@@ -2,6 +2,7 @@
 name = "steamcmd"
 version = "0.1.0"
 description = ""
+authors = ["KBwT3swqW3"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
