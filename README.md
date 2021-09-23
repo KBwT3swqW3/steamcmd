@@ -24,9 +24,9 @@ no way affiliated with Steam or Valve
 # Installation
 
 ```sh
-steam@server:~$ python3.8 -m venv /home/steam/.venv
+steam@server:~$ python3 -m venv /home/steam/.venv
 steam@server:~$ source .venv/bin/activate
-(.venv) steam@server:~$ pip install git+https://github.com/KBwT3swqW3/steamcmd.git
+(.venv) steam@server:~$ pip install https://github.com/KBwT3swqW3/steamcmd/releases/download/refs%2Fheads%2Fgithub-actions-build/steamcmd.tar.gz
 ```
 
 # Usage
